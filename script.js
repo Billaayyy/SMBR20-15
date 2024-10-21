@@ -7,8 +7,8 @@ function markAsDone(checkbox) {
         label.classList.remove('completed');
     }
 
-    // Set the cookie with task status
-    setCookie(checkbox.id, checkbox.checked, 7); // Cookie expires in 7 days
+    // Set the cookie task status
+    setCookie(checkbox.id, checkbox.checked); // Cookie expires in 7 days
 }
 
 // Countdown function
@@ -29,11 +29,12 @@ function updateCountdown(dueDate, countdownId) {
 
     countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
-    // Update the countdown every second
+    // Update countdown every second
     setTimeout(() => updateCountdown(dueDate, countdownId), 1000);
 }
 
-// Start countdown for each task
+// Start countdown for each task ygy
+// Reminder : Update ini sesuai sama countdown id di index
 function startCountdowns() {
     const tasks = [
         { dueDate: "2024-10-25", countdownId: "countdown1" },
@@ -49,15 +50,15 @@ function startCountdowns() {
     });
 }
 
-// Function to set a cookie
-function setCookie(cname, cvalue, exdays) {
+// Function set cookie
+function setCookie(cname, cvalue, exdays = 90) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     const expires = "expires=" + d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-// Function to get a cookie
+// Function get cookie
 function getCookie(cname) {
     const name = cname + "=";
     const decodedCookie = decodeURIComponent(document.cookie);
@@ -74,15 +75,16 @@ function getCookie(cname) {
     return "";
 }
 
-// Load task status from cookies when the page loads
+// reLoad task status from cookies when the page loads
+// Reminder: Update ini terus biar ngeload task baru, janlup edit task id juga di index
 document.addEventListener("DOMContentLoaded", function () {
     const taskIds = ['task1', 'task2', 'task3', 'task4', 'task5', 'task6'];
 
     taskIds.forEach(id => {
         const status = getCookie(id);
         const checkbox = document.getElementById(id);
-        checkbox.checked = (status === "true"); // Set checkbox based on cookie value
-        markAsDone(checkbox); // Update label style based on cookie status
+        checkbox.checked = (status === "true"); 
+        markAsDone(checkbox); 
     });
 });
 
