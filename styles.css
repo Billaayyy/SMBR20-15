@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #212529;
+    color: #333;
+    padding: 40px 0; /* Keep padding for top and bottom spacing */
+    text-align: center; /* Center text */
+}
+
+.header {
+    max-width: 600px;
+    margin: auto; /* Center the header */
+    padding: 20px; /* Add padding for spacing */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px; /* Adjusted margin for better spacing */
+    color: white;
+}
+
+p {
+    color: #e4e4e4; /* Slightly lighter color for the description */
+    margin-bottom: 20px; /* Spacing below the description */
+}
+
+hr {
+    border: 1px solid #e0e0e0; /* Style the separation line */
+    margin: 20px 0; /* Spacing around the line */
+}
+
+.container {
+    max-width: 600px;
+    margin: auto; /* Center the container */
+    background: rgb(98, 98, 98);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    /* Remove the border separating tasks */
+    border-bottom: none; /* Change this to none to remove lines */
+    transition: background 0.3s;
+    color: white;
+}
+
+li:hover {
+    background: #9f9f9f;
+}
+
+input[type="checkbox"] {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: rgb(0, 201, 0);
+}
+
+.countdown {
+    font-weight: bold;
+    color: red; /* Countdown numbers colored red */
+    font-size: 1rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem; /* Smaller font size for the creator tag */
+    color: #888; /* Slightly lighter color for the text */
+}

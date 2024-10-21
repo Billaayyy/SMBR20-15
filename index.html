@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Reminder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1><strong>SMB 20 & SAB 19 Reminder</strong></h1>
+        <p>This website purpose is to remind fellow friends of their assignment</p>
+        <hr> 
+    </div>
+    <div class="container">
+        <ul id="task-list">
+            <li>
+                <input type="checkbox" id="task1" onchange="markAsDone(this)">
+                <label for="task1">Math Homework - Due: <span class="due-date">2024-10-25</span></label>
+                <span class="countdown" id="countdown1"></span>
+            </li>
+            <li>
+                <input type="checkbox" id="task2" onchange="markAsDone(this)">
+                <label for="task2">Science Project - Due: <span class="due-date">2024-10-30</span></label>
+                <span class="countdown" id="countdown2"></span>
+            </li>
+            <li>
+                <input type="checkbox" id="task3" onchange="markAsDone(this)">
+                <label for="task3">English Essay - Due: <span class="due-date">2024-11-05</span></label>
+                <span class="countdown" id="countdown3"></span>
+            </li>
+            <li>
+                <input type="checkbox" id="task4" onchange="markAsDone(this)">
+                <label for="task4">History Presentation - Due: <span class="due-date">2024-11-10</span></label>
+                <span class="countdown" id="countdown4"></span>
+            </li>
+            <li>
+                <input type="checkbox" id="task5" onchange="markAsDone(this)">
+                <label for="task5">Ga tau anjeng - Due: <span class="due-date">2024-11-23</span></label>
+                <span class="countdown" id="countdown5"></span>
+            </li>
+            <li>
+                <input type="checkbox" id="task6" onchange="markAsDone(this)">
+                <label for="task5">Kalo ini gue tau - Due: <span class="due-date">2024-11-25</span></label>
+                <span class="countdown" id="countdown6"></span>
+            </li>
+        </ul>
+    </div>
+    <footer>
+        <p>Creator: Billy</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
