@@ -37,7 +37,7 @@ function updateCountdown(dueDate, countdownId) {
 // Reminder : Update ini sesuai sama countdown id di index
 function startCountdowns() {
     const tasks = [
-        { dueDate: "2024-10-25", countdownId: "countdown1" },
+        { dueDate: "2024-10-24", countdownId: "countdown1" },
         { dueDate: "2024-10-30", countdownId: "countdown2" },
         { dueDate: "2024-11-05", countdownId: "countdown3" },
         { dueDate: "2024-11-10", countdownId: "countdown4" },
