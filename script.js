@@ -8,7 +8,7 @@ function markAsDone(checkbox) {
     }
 
     // Set the cookie task status
-    setCookie(checkbox.id, checkbox.checked); // Cookie expires in 7 days
+    setCookie(checkbox.id, checkbox.checked, 7); // Cookie expires in 7 days
 }
 
 // Countdown function
@@ -37,8 +37,12 @@ function updateCountdown(dueDate, countdownId) {
 // Reminder : Update ini sesuai sama countdown id di index
 function startCountdowns() {
     const tasks = [
-        { dueDate: "2024-10-24", countdownId: "countdown1" },
-        { dueDate: "2024-10-22", countdownId: "countdown2" },
+        { dueDate: "2024-10-30", countdownId: "countdown1" },
+        { dueDate: "2024-10-29", countdownId: "countdown2" },
+        { dueDate: "2024-10-27", countdownId: "countdown3" },
+        { dueDate: "2024-10-28", countdownId: "countdown4" },
+        { dueDate: "2024-10-29", countdownId: "countdown5" },
+        { dueDate: "2024-10-31", countdownId: "countdown6" },
     ];
 
     tasks.forEach(task => {
@@ -47,7 +51,7 @@ function startCountdowns() {
 }
 
 // Function set cookie
-function setCookie(cname, cvalue, exdays = 90) {
+function setCookie(cname, cvalue, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     const expires = "expires=" + d.toUTCString();
@@ -74,7 +78,7 @@ function getCookie(cname) {
 // reLoad task status from cookies when the page loads
 // Reminder: Update ini terus biar ngeload task baru, janlup edit task id juga di index
 document.addEventListener("DOMContentLoaded", function () {
-    const taskIds = ['task1', 'task2'];
+    const taskIds = ['tugas pmb', 'tugas acc', 'tugas acct', 'tugas en', 'tugas apresbud'];
 
     taskIds.forEach(id => {
         const status = getCookie(id);
