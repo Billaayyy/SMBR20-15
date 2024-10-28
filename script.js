@@ -77,7 +77,7 @@ function getCookie(cname) {
 // reLoad task status from cookies when the page loads
 // Reminder: Update ini terus biar ngeload task baru, janlup edit task id juga di index
 document.addEventListener("DOMContentLoaded", function () {
-    const taskIds = ['tugas pmb', 'tugas acc', 'tugas apresbud', 'tugas bindo'];
+    const taskIds = ['tugas pmb', 'tugas acc', 'tugas apresbud', 'tugas bindo', 'tugas psdk'];
 
     taskIds.forEach(id => {
         const status = getCookie(id);
