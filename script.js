@@ -38,8 +38,6 @@ function updateCountdown(dueDate, countdownId) {
 function startCountdowns() {
     const tasks = [
         { dueDate: "2024-10-30", countdownId: "countdown1" },
-        { dueDate: "2024-10-29", countdownId: "countdown2" },
-        { dueDate: "2024-10-29", countdownId: "countdown5" },
         { dueDate: "2024-10-31", countdownId: "countdown6" },
         { dueDate: "2024-11-01", countdownId: "countdown7" },
     ];
@@ -77,7 +75,7 @@ function getCookie(cname) {
 // reLoad task status from cookies when the page loads
 // Reminder: Update ini terus biar ngeload task baru, janlup edit task id juga di index
 document.addEventListener("DOMContentLoaded", function () {
-    const taskIds = ['tugas pmb', 'tugas acc', 'tugas apresbud', 'tugas bindo', 'tugas psdk'];
+    const taskIds = ['tugas pmb', 'tugas apresbud', 'tugas bindo'];
 
     taskIds.forEach(id => {
         const status = getCookie(id);
