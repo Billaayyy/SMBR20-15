@@ -3,37 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Task Reminder</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Maintenance</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+    </style>
 </head>
 <body>
-    <div class="header">
-        <h1><strong>SMB 20 & SAB 15 Reminder</strong></h1>
-        <p>This website purpose is to remind fellow friends of their assignment</p>
-        <hr> 
+    <div>
+        <h1>Lagi Maintenance Bentar..</h1>
+        <p>Web nya lagi pengen gue update dlu bentar,  nanti online lagi kok santuy kabeh.</p>
+        <p>-Billy</p>
     </div>
-    <div class="container">
-        <ul id="task-list">
-            <li>
-                <input type="checkbox" id="tugas pmb" onchange="markAsDone(this)">
-                <label for="task1">Tugas PMB - Due: <span class="due-date">2024-10-30</span></label>
-                <span class="countdown" id="countdown1"></span>
-            </li>
-            <li> 
-                <input type="checkbox" id="tugas apresbud" onchange="markAsDone(this)">
-                <label for="task6">Present Apresbud (Kel 5) - Due: <span class="due-date">2024-10-31</span></label>
-                <span class="countdown" id="countdown6"></span>
-            </li>
-            <li>
-                 <input type="checkbox" id="tugas bindo" onchange="markAsDone(this)">
-                <label for="task7">Tugas Bindo (Makalah) - Due: <span class="due-date">2024-11-01</span></label>
-                <span class="countdown" id="countdown7"></span>
-            </li>
-        </ul>
-    </div>
-    <footer>
-        <p>Creator: Billy</p>
-    </footer>
-    <script src="script.js"></script>
 </body>
 </html>
